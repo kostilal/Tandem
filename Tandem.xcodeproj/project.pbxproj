@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951F779B264DB82700BD2891 /* AlbumsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F779A264DB82700BD2891 /* AlbumsFormatter.swift */; };
+		951F77A2264DB9E900BD2891 /* AlbumsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F77A1264DB9E900BD2891 /* AlbumsAPIService.swift */; };
 		9582CC44264D686200CE91AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582CC43264D686200CE91AC /* AppDelegate.swift */; };
 		9582CC4D264D686300CE91AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9582CC4C264D686300CE91AC /* Assets.xcassets */; };
 		9582CC50264D686300CE91AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9582CC4E264D686300CE91AC /* LaunchScreen.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951F779A264DB82700BD2891 /* AlbumsFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsFormatter.swift; sourceTree = "<group>"; };
+		951F77A1264DB9E900BD2891 /* AlbumsAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsAPIService.swift; sourceTree = "<group>"; };
 		9582CC40264D686200CE91AC /* Tandem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tandem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9582CC43264D686200CE91AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9582CC4C264D686300CE91AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,11 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		951F7797264DB3F600BD2891 /* Cells */ = {
+		951F7799264DB81800BD2891 /* Formatter */ = {
 			isa = PBXGroup;
 			children = (
+				951F779A264DB82700BD2891 /* AlbumsFormatter.swift */,
 			);
-			path = Cells;
+			path = Formatter;
+			sourceTree = "<group>";
+		};
+		951F77A0264DB9D600BD2891 /* AlbumsAPIService */ = {
+			isa = PBXGroup;
+			children = (
+				951F77A1264DB9E900BD2891 /* AlbumsAPIService.swift */,
+			);
+			path = AlbumsAPIService;
 			sourceTree = "<group>";
 		};
 		9582CC37264D686200CE91AC = {
@@ -242,6 +255,7 @@
 		9582CD35264DA2B700CE91AC /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
+				951F77A0264DB9D600BD2891 /* AlbumsAPIService */,
 				9582CD36264DA2C800CE91AC /* APIService.swift */,
 			);
 			path = ApiService;
@@ -250,6 +264,7 @@
 		9582CD39264DA33E00CE91AC /* Albums */ = {
 			isa = PBXGroup;
 			children = (
+				951F7799264DB81800BD2891 /* Formatter */,
 				9582CD47264DA44F00CE91AC /* Models */,
 				9582CD46264DA43E00CE91AC /* Presenter */,
 				9582CD45264DA43900CE91AC /* View */,
@@ -276,7 +291,6 @@
 		9582CD45264DA43900CE91AC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				951F7797264DB3F600BD2891 /* Cells */,
 				9582CD62264DA8AB00CE91AC /* AlbumsViewController.swift */,
 				9582CD63264DA8AB00CE91AC /* AlbumsViewController.xib */,
 			);
@@ -379,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9582CD22264D6B3700CE91AC /* BaseNavigationController.swift in Sources */,
+				951F77A2264DB9E900BD2891 /* AlbumsAPIService.swift in Sources */,
 				9582CD52264DA5F300CE91AC /* AlbumsFactory.swift in Sources */,
 				9582CD31264D6B5700CE91AC /* Extensions.swift in Sources */,
 				9582CD5F264DA7C800CE91AC /* Album.swift in Sources */,
@@ -393,6 +408,7 @@
 				9582CD1F264D6B3700CE91AC /* BaseViewController.swift in Sources */,
 				9582CD30264D6B5700CE91AC /* Complitions.swift in Sources */,
 				9582CD64264DA8AB00CE91AC /* AlbumsViewController.swift in Sources */,
+				951F779B264DB82700BD2891 /* AlbumsFormatter.swift in Sources */,
 				9582CD21264D6B3700CE91AC /* LoadingViewController.swift in Sources */,
 				9582CD37264DA2C800CE91AC /* APIService.swift in Sources */,
 				9582CD25264D6B3F00CE91AC /* BlurEffectView.swift in Sources */,

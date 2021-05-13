@@ -54,6 +54,7 @@ extension AlbumsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = data[indexPath.row].title
+        cell.textLabel?.numberOfLines = 0
         
         return cell
     }

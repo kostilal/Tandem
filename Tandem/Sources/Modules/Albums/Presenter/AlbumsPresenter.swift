@@ -19,11 +19,15 @@ final class AlbumsPresenter {
     private weak var delegate: AlbumsPresenterDelegate?
     private weak var controller: AlbumsViewControllerProtocol?
     private var albums: [Album] = []
+    private let networkSevice: AlbumsAPIServiceProtocol
     
     // MARK: Life cycle
-    @discardableResult init(controller: AlbumsViewControllerProtocol, delegate: AlbumsPresenterDelegate) {
+    @discardableResult init(controller: AlbumsViewControllerProtocol,
+                            delegate: AlbumsPresenterDelegate,
+                            networkSevice: AlbumsAPIServiceProtocol = AlbumsAPIService()) {
         self.controller = controller
         self.delegate = delegate
+        self.networkSevice = networkSevice
         self.controller?.presenter = self
     }
 }
@@ -46,13 +50,19 @@ extension AlbumsPresenter: AlbumsPresenterProtocol {
 private extension AlbumsPresenter {
     // MARK: Private methods
     func fetchAlbums() {
-        controller?.hideLoadingController()
-        controller?.show(albums: [AlbumsViewModel(title: "Хуй нахуй"),
-                                  AlbumsViewModel(title: "Нахуй хуй")])
-        
-//        swags = SwagListModels.mockSwags
-//
-//        let vm = SwagListFormatter.convert(swags)
-//        controller?.show(swags: vm)
+        networkSevice.fetchAlbums {[weak self] (result) in
+            guard let self = self else { return }
+            async {
+                self.controller?.hideLoadingController()
+                switch result {
+                case .success(let albums):
+                    self.albums = albums
+                    let vm = AlbumsFormatter.convert(albums)
+                    self.controller?.show(albums: vm)
+                case .failure(let error):
+                    self.controller?.showAlert(title: "Error", message: error.description)
+                }
+            }
+        }
     }
 }

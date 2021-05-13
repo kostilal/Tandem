@@ -23,7 +23,6 @@ final class AlbumsRouter {
 
 extension AlbumsRouter: AlbumsPresenterDelegate {
     func presenter(_ presenter: AlbumsPresenterProtocol, didSelect album: Album) {
-//        let controller = mainFlowFactory.createBuySwagModule(delegate: self, swag: swag)
-//        navController.pushViewController(controller, animated: true)
+
     }
 }
