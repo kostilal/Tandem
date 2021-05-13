@@ -36,5 +36,101 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E69E5F2-FED1-4B99-B350-175EC6EE0D67"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tandem/Sources/Modules/Gallery/View/PhotosViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "show(photos:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5ADAAEF-3750-44D5-A14F-9C2584046705"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tandem/Sources/Services/ApiService/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "requestData(data:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "012D7A51-82A1-4F5C-8B89-9F35F3C17E00"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tandem/Sources/Services/ApiService/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "requestData(data:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79BA7E7F-CB45-4ED6-9433-8F5F39AC70B2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tandem/Sources/Services/ApiService/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "requestData(data:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "79BA7E7F-CB45-4ED6-9433-8F5F39AC70B2 - a13557c6f1e65c88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Tandem.APIService.requestData(data: Tandem.APIService.RequestData, completion: (Swift.Result&lt;Foundation.Data, Tandem.WebError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Tandem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/i.kostiukevich/Documents/Work/Projects/Tandem/Tandem/Sources/Services/ApiService/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "2075">
+               </Location>
+               <Location
+                  uuid = "79BA7E7F-CB45-4ED6-9433-8F5F39AC70B2 - cf69eac566e0b2e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Tandem.APIService.requestData(data: Tandem.APIService.RequestData, completion: (Swift.Result&lt;Foundation.Data, Tandem.WebError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Tandem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/i.kostiukevich/Documents/Work/Projects/Tandem/Tandem/Sources/Services/ApiService/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "317">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

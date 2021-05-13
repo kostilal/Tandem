@@ -44,16 +44,26 @@ final class APIService {
     
     static func requestData(data: RequestData, completion: @escaping Completion<Result<Data, WebError>>) {
         var request = URLRequest(url: data.url)
-        request.allHTTPHeaderFields = data.headers
-        request.httpMethod = data.method.rawValue
         
         if let parameters = data.parameters {
-            let parameterData = parameters.reduce("") { (result, param) -> String in
-                return result + "&\(param.key)=\(param.value as! String)"
-            }.data(using: .utf8)
+            var components = URLComponents(string: data.url.absoluteString)
             
-            request.httpBody = parameterData
+            components?.queryItems = parameters.compactMap { (param) -> URLQueryItem? in
+                var value = String()
+                
+                if let val = param.1 as? String { value = val }
+                if let val = param.1 as? NSNumber { value = "\(val)" }
+                
+                return URLQueryItem(name: param.key, value: value)
+            }
+            
+            if let url = components?.url {
+                request = URLRequest(url: url)
+            }
         }
+        
+        request.allHTTPHeaderFields = data.headers
+        request.httpMethod = data.method.rawValue
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0

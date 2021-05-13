@@ -35,8 +35,6 @@ final class AlbumsPresenter {
 extension AlbumsPresenter: AlbumsPresenterProtocol {
     func onViewDidLoad() {
         controller?.set(title: "Albums")
-        controller?.showLoadingController()
-        
         fetchAlbums()
     }
     
@@ -50,6 +48,7 @@ extension AlbumsPresenter: AlbumsPresenterProtocol {
 private extension AlbumsPresenter {
     // MARK: Private methods
     func fetchAlbums() {
+        controller?.showLoadingController()
         networkSevice.fetchAlbums {[weak self] (result) in
             guard let self = self else { return }
             async {

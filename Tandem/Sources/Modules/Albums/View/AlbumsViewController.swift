@@ -30,7 +30,7 @@ final class AlbumsViewController: BaseViewController {
 
 extension AlbumsViewController: AlbumsViewControllerProtocol {
     func show(albums: [AlbumsViewModel]) {
-        self.data = albums
+        data = albums
         tableView.reloadData()
     }
 }
@@ -67,6 +67,7 @@ extension AlbumsViewController: UITableViewDataSource {
 extension AlbumsViewController: UITableViewDelegate {
     // MARK: TableViewDelegate methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         presenter?.onSelectAlbum(with: indexPath.row)
     }
 }

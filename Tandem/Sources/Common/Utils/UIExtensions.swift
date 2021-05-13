@@ -48,3 +48,31 @@ extension UIViewController {
         self.didMove(toParent: nil)
     }
 }
+
+extension UIImageView {
+    public func image(with urlString: String?, placeHolderImage: String? = nil) {
+        func setImage(image: UIImage?) {
+            async {
+                self.image = image
+            }
+        }
+        
+        if let imageName = placeHolderImage,
+            let image = UIImage(named: imageName) {
+            setImage(image: image)
+        }
+        
+        guard let str = urlString, let url = URL(string: str) else {
+            return
+        }
+        
+        let theTask = URLSession.shared.dataTask(with: url) {
+            data, response, error in
+            if let response = data {
+                setImage(image: UIImage(data: response))
+            }
+        }
+        
+        theTask.resume()
+    }
+}
