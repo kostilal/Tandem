@@ -38,18 +38,20 @@ private extension PhotosViewController {
     // MARK: Private methods
     func prepareCollectionsView() {
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
+        collectionView.register(cellType: PhotosCollectionCell.self)
     }
 }
 
 extension PhotosViewController: UICollectionViewDataSource {
+    // MARK: UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath)
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(cellClass: PhotosCollectionCell.self, for: indexPath)
+        cell.configure(with: data[indexPath.row])
+        
         return cell
     }
 }

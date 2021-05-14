@@ -20,20 +20,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-EH-P09">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i2y-EZ-BUk">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
+                    <collectionViewLayout key="collectionViewLayout" id="YmU-jq-feS" customClass="TandemFlowLayout" customModule="Tandem" customModuleProvider="target"/>
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="tZd-EH-P09" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="3wt-Na-ub9"/>
+                <constraint firstItem="tZd-EH-P09" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="3wt-Na-ub9"/>
                 <constraint firstItem="tZd-EH-P09" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Jc-ny-ogp"/>
                 <constraint firstItem="tZd-EH-P09" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hoe-cI-FJM"/>
                 <constraint firstItem="tZd-EH-P09" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Sox-jX-aCV"/>

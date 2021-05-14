@@ -23,7 +23,7 @@ final class AlbumsRouter {
 
 extension AlbumsRouter: AlbumsPresenterDelegate {
     func presenter(_ presenter: AlbumsPresenterProtocol, didSelect album: Album) {
-        let controller = albumsFactory.createPhotosModule(albumId: album.id)
+        let controller = albumsFactory.createPhotosModule(album: album)
         navController.pushViewController(controller, animated: true)
     }
 }

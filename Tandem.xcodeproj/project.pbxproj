@@ -38,6 +38,9 @@
 		95EC4B31264DC58100402A47 /* PhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EC4B2F264DC58100402A47 /* PhotosViewController.xib */; };
 		95EC4B34264DC63000402A47 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC4B33264DC63000402A47 /* PhotosPresenter.swift */; };
 		95EC4B38264DC87800402A47 /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC4B37264DC87800402A47 /* PhotosAPIService.swift */; };
+		C4C4617E264E912000484939 /* PhotosCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4617C264E912000484939 /* PhotosCollectionCell.swift */; };
+		C4C4617F264E912000484939 /* PhotosCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C4617D264E912000484939 /* PhotosCollectionCell.xib */; };
+		C4C46184264E95AF00484939 /* TandemFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C46183264E95AF00484939 /* TandemFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		95EC4B2F264DC58100402A47 /* PhotosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosViewController.xib; sourceTree = "<group>"; };
 		95EC4B33264DC63000402A47 /* PhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenter.swift; sourceTree = "<group>"; };
 		95EC4B37264DC87800402A47 /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
+		C4C4617C264E912000484939 /* PhotosCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionCell.swift; sourceTree = "<group>"; };
+		C4C4617D264E912000484939 /* PhotosCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionCell.xib; sourceTree = "<group>"; };
+		C4C46183264E95AF00484939 /* TandemFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TandemFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +255,7 @@
 		9582CD19264D6B1500CE91AC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C4C46182264E958C00484939 /* FlowLayouts */,
 				9582CD2B264D6B5700CE91AC /* Complitions.swift */,
 				9582CD2D264D6B5700CE91AC /* Constants.swift */,
 				9582CD2C264D6B5700CE91AC /* Extensions.swift */,
@@ -368,6 +375,7 @@
 		95EC4B24264DC35B00402A47 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4C4617B264E90EF00484939 /* Cells */,
 				95EC4B2E264DC58100402A47 /* PhotosViewController.swift */,
 				95EC4B2F264DC58100402A47 /* PhotosViewController.xib */,
 			);
@@ -380,6 +388,23 @@
 				95EC4B37264DC87800402A47 /* PhotosAPIService.swift */,
 			);
 			path = PhotosAPIService;
+			sourceTree = "<group>";
+		};
+		C4C4617B264E90EF00484939 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C4C4617C264E912000484939 /* PhotosCollectionCell.swift */,
+				C4C4617D264E912000484939 /* PhotosCollectionCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C4C46182264E958C00484939 /* FlowLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				C4C46183264E95AF00484939 /* TandemFlowLayout.swift */,
+			);
+			path = FlowLayouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +468,7 @@
 				9582CD20264D6B3700CE91AC /* LoadingViewController.xib in Resources */,
 				9582CC50264D686300CE91AC /* LaunchScreen.storyboard in Resources */,
 				95EC4B31264DC58100402A47 /* PhotosViewController.xib in Resources */,
+				C4C4617F264E912000484939 /* PhotosCollectionCell.xib in Resources */,
 				9582CC4D264D686300CE91AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +488,7 @@
 				9582CD5F264DA7C800CE91AC /* Album.swift in Sources */,
 				9582CD58264DA72600CE91AC /* AlbumsModels.swift in Sources */,
 				9582CD2F264D6B5700CE91AC /* UIExtensions.swift in Sources */,
+				C4C4617E264E912000484939 /* PhotosCollectionCell.swift in Sources */,
 				9582CD4F264DA5EE00CE91AC /* AlbumsRouter.swift in Sources */,
 				9582CD33264D6B5700CE91AC /* Protocols.swift in Sources */,
 				95EC4B30264DC58100402A47 /* PhotosViewController.swift in Sources */,
@@ -473,6 +500,7 @@
 				9582CD1F264D6B3700CE91AC /* BaseViewController.swift in Sources */,
 				9582CD30264D6B5700CE91AC /* Complitions.swift in Sources */,
 				9582CD64264DA8AB00CE91AC /* AlbumsViewController.swift in Sources */,
+				C4C46184264E95AF00484939 /* TandemFlowLayout.swift in Sources */,
 				951F779B264DB82700BD2891 /* AlbumsFormatter.swift in Sources */,
 				95EC4B2C264DC51900402A47 /* PhotosFormatter.swift in Sources */,
 				9582CD21264D6B3700CE91AC /* LoadingViewController.swift in Sources */,

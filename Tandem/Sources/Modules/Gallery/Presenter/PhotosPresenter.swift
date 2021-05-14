@@ -9,16 +9,16 @@ import Foundation
 
 final class PhotosPresenter {
     private weak var controller: PhotosViewControllerProtocol?
-    private let albumId: Int
+    private let album: Album
     private var photos: [Photo] = []
     private let networkSevice: PhotosAPIServiceProtocol
     
     // MARK: Life cycle
     @discardableResult init(controller: PhotosViewControllerProtocol,
-                            albumId: Int,
+                            album: Album,
                             networkSevice: PhotosAPIServiceProtocol = PhotosAPIService()) {
         self.controller = controller
-        self.albumId = albumId
+        self.album = album
         self.networkSevice = networkSevice
         self.controller?.presenter = self
     }
@@ -26,7 +26,7 @@ final class PhotosPresenter {
 
 extension PhotosPresenter: BasePresenterProtocol {
     func onViewDidLoad() {
-        controller?.set(title: "Photos")
+        controller?.set(title: album.title)
         fetchAlbums()
     }
 }
@@ -35,7 +35,7 @@ private extension PhotosPresenter {
     // MARK: Private methods
     func fetchAlbums() {
         controller?.showLoadingController()
-        networkSevice.fetchPhotos(albumId: albumId) {[weak self] (result) in
+        networkSevice.fetchPhotos(albumId: album.id) {[weak self] (result) in
             guard let self = self else { return }
             async {
                 self.controller?.hideLoadingController()

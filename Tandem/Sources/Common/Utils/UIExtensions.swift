@@ -13,17 +13,40 @@ extension UIColor {
 
 extension UITableView {
     func register<T: UITableViewCell>(cellType cls: T.Type) {
-        let cellClass = String(describing: cls)
-        register(cls, forCellReuseIdentifier: cellClass)
+        register(cls, forCellReuseIdentifier: cls.identifier)
     }
     
     func dequeueReusableCell<T: UITableViewCell>(cellClass cls: T.Type) -> T {
-        let nibName = String(describing: cls)
-        return dequeueReusableCell(withIdentifier: nibName) as! T
+        guard let cell = dequeueReusableCell(withIdentifier: cls.identifier) as? T else {
+            fatalError("Fail to dequere cell: \(cls.identifier)")
+        }
+        
+        return cell
+    }
+}
+
+extension UICollectionView {
+    func register<T: UICollectionViewCell>(cellType cls: T.Type) {
+        let nib = UINib(nibName: T.identifier, bundle: nil)
+        register(nib, forCellWithReuseIdentifier: T.identifier)
+    }
+    
+    func dequeueReusableCell<T: UICollectionViewCell>(cellClass cls: T.Type, for indexPath: IndexPath) -> T {
+        guard let cell = dequeueReusableCell(withReuseIdentifier: T.identifier, for: indexPath) as? T else {
+            fatalError("Fail to dequere cell: \(cls.identifier)")
+        }
+        
+        return cell
     }
 }
 
 extension UITableViewCell {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
+
+extension UICollectionViewCell {
     static var identifier: String {
         return String(describing: self)
     }

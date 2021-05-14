@@ -25,5 +25,7 @@ private extension BaseNavigationController {
         self.navigationBar.barTintColor = UIColor.main
         self.navigationBar.tintColor = fontColor
         self.navigationBar.titleTextAttributes = [.foregroundColor: fontColor]
+        
+        self.view.backgroundColor = .white
     }
 }
